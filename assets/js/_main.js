@@ -143,3 +143,10 @@ $(document).ready(function () {
   });
 
 });
+
+$(document).ready(function() {
+  $('a[href^="#"]').click(function() {
+      var target = $(this.hash);
+      $('html, body').animate({ scrollTop: target.offset().top-100 }, 1000);
+  });
+});
